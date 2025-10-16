@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+*.env
+
+# Docker - These are the names of the volumes from your docker-compose.yml
+hadoop_namenode/
+hadoop_datanode/
+
+# IDE files
+.vscode/
+.idea/
+```
+
+---
+
+### ## Step 4: Add and Commit Your Files
+
+Now we will save a snapshot of your project's files in Git's history.
+
+1.  **Stage Your Files**: This command prepares all the files in your folder (except those in `.gitignore`) to be saved.
+    ```bash
+    git add .
+    ```
+
+2.  **Commit Your Files**: This command saves the staged files to your local Git history with a descriptive message.
+    ```bash
+    git commit -m "Initial commit: Setup Hadoop cluster with Python client"
+    ```
+
+---
+
+### ## Step 5: Connect Your Local and Remote Repositories
+
+Now, you'll tell your local Git repository where your remote GitHub repository is.
+
+1.  Go back to your repository page on GitHub and copy the HTTPS URL.
+
+2.  In your terminal, run this command, pasting your repository's URL at the end:
+    ```bash
+    git remote add origin https://github.com/your-username/hadoop-docker-lab.git
+    ```
+    *(Replace the URL with your own)*
+
+---
+
+### ## Step 6: Push Your Code to GitHub
+
+This is the final step where you upload your committed files to GitHub.
+
+1.  Run the following command. It pushes your `main` branch to the `origin` (which is the name for your GitHub repo). The `-u` flag links them for future pushes.
+    ```bash
+    git push -u origin main
